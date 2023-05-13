@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "underline";
+  src: url(SnackFont.otf);
+}
+
+*{
+  box-sizing: border-box;
+  font-family: "underline";
+}
+body{
+  background-color: beige;
+}
+main{
+  width: 100%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+#lobby{
+  width: 50%;
+  height: 65%;
+  overflow-y: scroll;
+  border: 5px solid rgba(10,200,130, .7);
+  border-radius: 5px;
+  box-shadow: -1px -1px 1px 1px rgba(10,200,130, .8);
+  background-color: white;
+  user-select: none;
+}
+#playing{
+  width: 50%;
+  height: 35%;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  overflow-y: scroll;
+  border: 5px solid rgba(150,20,30, .7);
+  border-radius: 5px;
+  box-shadow: -1px -1px 1px 1px rgba(150,20,30, .8);
+  background-color: white;
+  user-select: none;
+}
+article{
+  display: flex;
+  flex-direction: row;
+  
+}
+article span{
+  display: inline-block;
+  border-bottom: 1px solid rgba(100,100,100, .4);
+  width: 50%;
+  height: 2rem;
+  text-align: center;
+  padding: .3rem;
+  font-size: large;
+  font-style: italic;
+}
+
+.cir{
+  display: inline-block;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: green;
+}
+#lobby article:hover{
+  background-color: beige;
+}
+article.inactive span{
+  color: rgba(100,100,100, .6);
+}
+article.inactive .cir{
+  background-color: red;
+}
+article.pending .cir{
+  background-color: yellow;
+}
+.self-user span{
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15pt;
+  color: rgb(10,200,130);
+}
+aside{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  height: 98%;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 1000;
+  transform: scale(1.1, 1.1);
+}
+aside div{
+  background-color: beige;
+  min-width: 40%;
+  max-width: 90%;
+  min-height: 30%;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  user-select: none;
+}
+#change-username p{
+  font-size: 10pt;
+}
+#change-username form{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#change-username input{
+  min-width: 50%;
+  height: 30px;
+  outline: 2px solid black;
+  font-size: 14pt;
+}
+#change-username button{
+  margin-top: 1rem;
+  padding: 0.3rem;
+  background-color: beige;
+  min-width: 3rem;
+  cursor: pointer;
+}
+#change-username button:hover{
+  background-color: rgb(10,200,130);
+}
+#request-chat{
+  text-align: center;
+}
+#request-chat button{
+  width: 4rem;
+  height: 2rem;
+  padding: .2rem;
+}
+#request-chat .response{
+  margin-top: 1.5rem;
+}
+#response-chat{
+  text-align: center;
+}
+#response-chat button{
+  width: 4rem;
+  height: 2rem;
+  padding: .2rem;
+}
+.yButton{
+  background-color: beige;
+  border-color: green;
+  color: green;
+  cursor: pointer;
+}
+.yButton:hover{
+  background-color: green;
+  color: white;
+}
+.nButton{
+  margin-left: 1rem;
+  background-color: beige;
+  border-color: red;
+  color: red;
+  cursor: pointer;
+}
+.nButton:hover{
+  background-color: red;
+  color: white;
+}
+#chat-area{
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 90%;
+  height: 200px;
+  overflow-y: scroll;
+  margin: 0 auto;
+}
+#chat-box form{
+  margin: 1rem 0;
+  text-align: center;
+}
+#chat-box form input{
+  min-width: 60%;
+  height: 20pt;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+#chat-box form label{
+  font-size: 8pt;
+}
+#chat-area p.chat-self{
+  color: rgb(150,20,30);
+}
+#chat-area p.chat-other{
+  color: rgb(10, 200, 130);
+}
+@media  screen and (max-width : 700px) {
+  #lobby, #playing{
+    width: 90%
+  }
+}
