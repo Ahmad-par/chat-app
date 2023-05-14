@@ -310,11 +310,15 @@ function userFormHandler(event){
 
 function escPressHandler(e){
   if (e.key === 'Escape'){
-    document.body.style.overflow = 'visible'
-    document.getElementById('change-username').style.display = 'none'
-    document.getElementById('change-username').querySelector('.response').innerHTML = ''
-    document.removeEventListener('keydown', escPressHandler)
+    clearUsernameModal()
   }
+}
+
+function clearUsernameModal(){
+  document.body.style.overflow = 'visible'
+  document.getElementById('change-username').style.display = 'none'
+  document.getElementById('change-username').querySelector('.response').innerHTML = ''
+  document.removeEventListener('keydown', escPressHandler)
 }
 
 function noReqHandler(e){
@@ -356,6 +360,9 @@ function clearResModal(){
 function showResModal(name, wantedId, requestedById){
   if (document.getElementById('request-chat').style.display === ''){
     clearBusyReq(document.getElementById('request-chat'))
+  }
+  if (document.getElementById('change-username').style.display === ''){
+    clearUsernameModal()
   }
   let userModalObj = document.getElementById('response-chat')
   let yButObj = document.createElement('button')
