@@ -1,6 +1,6 @@
 # chat-app
 
-This text-based chat application allows you to communicate with other users on the same network.
+This text-based chat application allows you to communicate with other users on the same network. The application contains an upper list(lobby) where each connected user has an entry. If you click on your own entry you can choose a username and if you click on other entries you can invite them to a conversation. The lower list of the app contains a row for every pair of users chatting with each other.
 
 After downloading the source code you should go to application folder and run 'npm install' to intall dependencies.(nodejs and npm are required)
 
