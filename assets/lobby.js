@@ -67,7 +67,15 @@ window.addEventListener('load', () => {
 //Functions
 function requestUsers(){
   socket.send(JSON.stringify({type: 'fetch-players'}))
-  setTimeout(requestUsers, 3000)
+
+  let requestModal = document.getElementById('request-chat')
+  let responseModal = document.getElementById('response-chat')
+
+  if (requestModal.style.display === '' || responseModal.style.display === ''){
+    setTimeout(requestUsers, 1500)
+  }else{
+    setTimeout(requestUsers, 3000)
+  }
 }
 
 function renderChatList(){
@@ -206,7 +214,7 @@ function renderPlayersList(){
                 clearBusyReq(document.getElementById('request-chat'))
                 lobbyObj.querySelector(`article[uniq-id="${currId}"]`).className = 'self-user'
                 offeredId = null
-              }, 2000)
+              }, 1000)
             }else{
               clearBusyReq(document.getElementById('request-chat'))
               lobbyObj.querySelector(`article[uniq-id="${currId}"]`).className = 'self-user'

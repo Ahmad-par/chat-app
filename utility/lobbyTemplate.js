@@ -9,7 +9,7 @@ module.exports = () => `<!DOCTYPE html>
   <body>
   <aside id="change-username" style="display: none;">
       <div>
-        <p>Choose a username then press SELECT:</p>
+        <p>Choose a username then press SELECT: (ESC to quit)</p>
         <p>Username should be at least 5 characters long and can contain letters, numbers, "_", "$" and "."</p>
         <form action="">
           <input/><br/>
