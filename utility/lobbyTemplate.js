@@ -12,7 +12,7 @@ module.exports = () => `<!DOCTYPE html>
         <p>Choose a username then press SELECT: (ESC to quit)</p>
         <p>Username should be at least 5 characters long and can contain letters, numbers, "_", "$" and "."</p>
         <form action="">
-          <input/><br/>
+          <input maxlength="12"/><br/>
           <button type="submit">SELECT</button>
         </form>
         <p class="response"></p>
