@@ -78,11 +78,11 @@ webSockServer.on('request', (request) => {
     }
 
     if (msgObj.type === 'update-name'){
-      firstList = firstList.map(({id, name, pending}) => {
-        if (Number(msgObj.value.id) === id){
-          return {id, name: msgObj.value.name, pending}
+      firstList = firstList.map((user) => {
+        if (Number(msgObj.value.id) === user.id){
+          return {...user, name: msgObj.value.name}
         }else{
-          return {id, name, pending}
+          return user
         }
       })
       return
