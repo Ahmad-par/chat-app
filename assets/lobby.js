@@ -70,8 +70,9 @@ function requestUsers(){
 
   let requestModal = document.getElementById('request-chat')
   let responseModal = document.getElementById('response-chat')
+  let chatModal = document.getElementById('chat-box')
 
-  if (requestModal.style.display === '' || responseModal.style.display === ''){
+  if (requestModal.style.display === '' || responseModal.style.display === '' || chatModal.style.display === ''){
     setTimeout(requestUsers, 1500)
   }else{
     setTimeout(requestUsers, 3000)
@@ -430,7 +431,7 @@ function createChatModal(){
                         </section>
                         <form>
                           <label>0/40</label><br/>
-                          <input maxlength="40"/>
+                          <input maxlength="40" placeholder="TYPE HERE"/>
                         </form>`
 }
 
